@@ -8,6 +8,7 @@
 
 ou=group,ou=user 需要提前创建
 配置文件settings.py
+
 python main.py  （可放到计划任务中 每半小时执行）
 
 功能： 
