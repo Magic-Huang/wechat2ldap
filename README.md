@@ -23,6 +23,7 @@ python main.py  （可放到计划任务中 每半小时执行）
 部署后比如  password.test.com 员工可以自己通过web界面进行密码重置和密码修改  
 
 邮件发送内容在settings.py中配置，如下  这些也是我在公司接入了的项目
+
 MESSAGE = """
 <p>LDAP账号可用于登入 Gitlab、jira 、wiki、yearning、jenkins、apollo等平台</p>
 <p>gitlab : <a href="http://git.ops.test.com">http://git.ops.test.com</a><P>
