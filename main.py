@@ -149,8 +149,6 @@ class Main:
 
 if __name__ == "__main__":
     r = Main()
-    #保留用户
-    exclude_list=["cicd",]
     r.sync()
     #r.get_wechat_one_info('MeiCuiCui')
     #r.get_wechat_gid_info(40)
