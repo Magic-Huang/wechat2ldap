@@ -19,7 +19,7 @@ class Email:
         receiver = [email]
         mail_msg = MESSAGE
         message = MIMEText(mail_msg % (username, passwd), 'html', 'utf-8')
-        message['From'] = Header('yeahgoservice@sina.com')
+        message['From'] = Header(self.sender_username)
         message['To'] = Header('%s' % sn, 'utf-8')
         subject = 'LDAP 账号信息'
         message['Subject'] = Header(subject, 'utf-8')
