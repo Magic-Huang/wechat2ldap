@@ -35,6 +35,6 @@ class Email:
 
 if __name__ == "__main__":
     mail = Email()
-    mail.send_mail('huangyuan@yongdaxing.cn', 'stevenyuan', '阿元', passwd='123')
+    mail.send_mail('stevenyuan@qq.cn', 'stevenyuan', '阿元', passwd='123')
     #mail.send_mail('hyuan871205@126.com', 'stevenyuan', '阿元', passwd='123')
 
