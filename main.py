@@ -64,8 +64,9 @@ class Main:
         for l_uid in ldap_uid:
             if l_uid not in wechat_uid:
                 uid = ''.join(l_uid)
-                #print('开始删除ldap用户:%s' % uid)
-                self.openldap.ldap_del_user(uid)
+                if uid not in exclude_list:
+                  #print('开始删除ldap用户:%s' % uid)
+                  self.openldap.ldap_del_user(uid)
 
         # 删除不在企业微信的用户组
         #print ldap_gid
@@ -147,6 +148,8 @@ class Main:
 
 if __name__ == "__main__":
     r = Main()
+    #保留用户
+    exclude_list=["cicd",]
     r.sync()
     #r.get_wechat_one_info('MeiCuiCui')
     #r.get_wechat_gid_info(40)
