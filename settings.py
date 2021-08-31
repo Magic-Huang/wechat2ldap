@@ -16,6 +16,7 @@ LDAP_BINDPW = '123456'
 LDAP_BASE = 'dc=test,dc=com'
 LDAP_USER_OU = 'ou=user'  # 用户所在的ou，需要提前创建
 LDAP_GROUP_OU = 'ou=group' # 部门所在的ou，需要提前创建
+EXCLUDE_LIST=["cicd",]  #保留用户 用于公共账号配置
 
 # mail
 SMTP_HOST = 'smtp.sina.com'
