@@ -5,6 +5,7 @@ from wechat import WeChat
 from ldap import OpenLdap
 from mail import Email
 from ldap3 import MODIFY_REPLACE
+from settings import EXCLUDE_LIST
 import random,string
 import sys
 reload(sys)
@@ -64,7 +65,7 @@ class Main:
         for l_uid in ldap_uid:
             if l_uid not in wechat_uid:
                 uid = ''.join(l_uid)
-                if uid not in exclude_list:
+                if uid not in EXCLUDE_LIST:
                   #print('开始删除ldap用户:%s' % uid)
                   self.openldap.ldap_del_user(uid)
 
